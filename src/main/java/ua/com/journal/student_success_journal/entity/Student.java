@@ -13,26 +13,25 @@ import java.util.List;
 
 public class Student {
 
-private Long id;
+    private Long id;
 
-private String last_name;
+    private String last_name;
 
-private String first_name;
+    private String first_name;
 
-private String middle_name;
+    private String middle_name;
 
-private String email;
+    private String email;
 
-private int phone;
+    private int phone;
 
-private Users users;
+    private Users users;
 
-private Group groups;
+    private Group groups;
 
-private List<Mark> marks;
+    private List<Mark> marks;
 
-private List<Absence> absences;
+    private List<Absence> absences;
 
-private List<Total> totalList;
-
+    private List<Total> totalList;
 }
