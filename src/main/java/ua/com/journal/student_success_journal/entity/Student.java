@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
-public class Students {
+public class Student {
 
 private Long id;
 
@@ -27,11 +27,11 @@ private int phone;
 
 private Users users;
 
-private Courses courses;
+private Group groups;
 
-private List<Marks> marks;
+private List<Mark> marks;
 
-private List<Absences> absences;
+private List<Absence> absences;
 
 private List<Total> totalList;
 

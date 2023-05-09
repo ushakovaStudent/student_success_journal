@@ -19,6 +19,6 @@ public class LessonType {
 
     private String description;
 
-    private List <DisciplinesHasLessonType> disciplinesHasLessonTypeList;
+    private List <DisciplineHasLessonType> disciplinesHasLessonTypeList;
 }
 

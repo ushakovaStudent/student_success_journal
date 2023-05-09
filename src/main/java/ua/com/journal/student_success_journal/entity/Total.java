@@ -18,5 +18,5 @@ public class Total {
 
     private Long quantityOfAbsences;
 
-    private Students students;
+    private Student students;
 }

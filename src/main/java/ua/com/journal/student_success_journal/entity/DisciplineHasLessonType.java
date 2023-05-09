@@ -3,21 +3,17 @@ package ua.com.journal.student_success_journal.entity;
 
 import lombok.*;
 
-import java.util.List;
-
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 
-public class Courses{
+public class DisciplineHasLessonType {
 
     private Long id;
 
-    private Long number;
+    private LessonType lessonType;
 
-    private List<Groups> groupsList;
-
-    private List<Students> students;
+    private Discipline disciplines;
 }

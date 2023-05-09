@@ -11,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 
-public class Marks {
+public class Mark {
 
     private Long id;
 
@@ -19,7 +19,7 @@ public class Marks {
 
     private Long grade;
 
-    private Students students;
+    private Student students;
 
-    private Disciplines disciplines;
+    private Discipline disciplines;
 }

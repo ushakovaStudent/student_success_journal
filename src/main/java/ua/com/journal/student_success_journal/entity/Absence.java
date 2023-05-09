@@ -11,7 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 
-public class Absences {
+public class Absence {
 
     private Long id;
 
@@ -19,9 +19,9 @@ public class Absences {
 
     private String cause;
 
-    private Students students;
+    private Student students;
 
-    private Disciplines disciplines;
+    private Discipline disciplines;
 
 
 }

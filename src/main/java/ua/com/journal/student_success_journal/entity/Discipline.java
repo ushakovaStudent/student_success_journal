@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
-public class Disciplines {
+public class Discipline {
 
     private Long id;
 
@@ -21,9 +21,9 @@ public class Disciplines {
 
     private String lecturer;
 
-    private List <DisciplinesHasLessonType> disciplinesHasLessonTypeList;
+    private List <DisciplineHasLessonType> disciplinesHasLessonTypeList;
 
-    private List<Marks> marks;
+    private List<Mark> marks;
 
-    private List<Absences> absences;
+    private List<Absence> absences;
 }
