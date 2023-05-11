@@ -1,6 +1,7 @@
 package ua.com.journal.student_success_journal.entity;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -11,8 +12,13 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
+
+@Entity
+@Table(name = "disciplines")
 public class Discipline {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -21,9 +27,12 @@ public class Discipline {
 
     private String lecturer;
 
-    private List <DisciplineHasLessonType> disciplinesHasLessonTypeList;
+    @OneToMany(mappedBy = "discipline")
+    private List <DisciplineHasLessonType> disciplineHasLessonTypes;
 
-    private List<Mark> marks;
+    @OneToMany(mappedBy = "disciplins")
+    private List<Mark> markList;
 
-    private List<Absence> absences;
+    @OneToMany(mappedBy = "disciplinies")
+    private List<Absence> absenceList;
 }

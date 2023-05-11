@@ -1,6 +1,7 @@
 package ua.com.journal.student_success_journal.entity;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
@@ -10,7 +11,13 @@ import lombok.*;
 @ToString
 
 
+@Entity
+@Table(name = "total")
 public class Total {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String month;
 
@@ -18,5 +25,7 @@ public class Total {
 
     private Long quantityOfAbsences;
 
-    private Student students;
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student studentes;
 }

@@ -1,6 +1,7 @@
 package ua.com.journal.student_success_journal.entity;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -11,13 +12,21 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
+
+@Entity
+@Table(name = "grupi")
 public class Group {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Long number;
 
-    private Course courses ;
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    private Course course;
 
-    private List<Student> students;
+    @OneToMany(mappedBy = "group")
+    private List<Student> studentList;
 }

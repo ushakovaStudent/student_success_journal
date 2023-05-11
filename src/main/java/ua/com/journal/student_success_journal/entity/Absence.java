@@ -1,6 +1,7 @@
 package ua.com.journal.student_success_journal.entity;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
@@ -11,17 +12,26 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 
+
+@Entity
+@Table(name = "absences")
 public class Absence {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Date dateOfAbsences;
 
     private String cause;
 
-    private Student students;
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student studenties;
 
-    private Discipline disciplines;
+    @ManyToOne
+    @JoinColumn(name = "discipline_id")
+    private Discipline disciplinies;
 
 
 }
