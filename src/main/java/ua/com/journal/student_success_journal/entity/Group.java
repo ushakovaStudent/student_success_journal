@@ -4,8 +4,6 @@ package ua.com.journal.student_success_journal.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Setter
 @Getter
 @NoArgsConstructor
@@ -14,19 +12,14 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "grupi")
+@Table(name = "group_course")
 public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long number;
+    private int numberGroup;
 
-    @ManyToOne
-    @JoinColumn(name = "course_id")
-    private Course course;
-
-    @OneToMany(mappedBy = "group")
-    private List<Student> studentList;
+    private int numberCourse;
 }

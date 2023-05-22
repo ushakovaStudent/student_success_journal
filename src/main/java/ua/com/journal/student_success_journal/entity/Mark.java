@@ -23,7 +23,9 @@ public class Mark {
 
     private Date dateOfMarks;
 
-    private Long grade;
+    private int mark;
+
+    private boolean truancy;
 
     @ManyToOne
     @JoinColumn(name = "student_id")
@@ -31,5 +33,9 @@ public class Mark {
 
     @ManyToOne
     @JoinColumn(name = "discipline_id")
-    private Discipline disciplins;
+    private Discipline discipline;
+
+    @ManyToOne
+    @JoinColumn(name = "lesson_type_id")
+    private LessonType lesson_type;
 }

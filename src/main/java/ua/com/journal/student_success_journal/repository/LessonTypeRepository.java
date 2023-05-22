@@ -5,4 +5,7 @@ import org.springframework.stereotype.Repository;
 import ua.com.journal.student_success_journal.entity.LessonType;
 
 @Repository
-public interface LessonTypeRepository extends JpaRepository<LessonType, Long> {}
+public interface LessonTypeRepository extends JpaRepository<LessonType, Long> {
+
+    LessonType getById(Long id);
+}

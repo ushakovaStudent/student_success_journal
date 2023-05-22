@@ -27,11 +27,9 @@ public class Absence {
 
     @ManyToOne
     @JoinColumn(name = "student_id")
-    private Student studenties;
+    private Student student;
 
     @ManyToOne
     @JoinColumn(name = "discipline_id")
-    private Discipline disciplinies;
-
-
+    private Discipline discipline;
 }

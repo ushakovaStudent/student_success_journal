@@ -29,8 +29,7 @@ public class Student {
 
     private String email;
 
-    private int phone;
-
+    private Long phone;
 
     @OneToOne
     @MapKey
@@ -42,12 +41,9 @@ public class Student {
     @JoinColumn(name = "group_id")
     private Group group;
 
-    @OneToMany(mappedBy = "student")
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Mark> marks;
 
-    @OneToMany(mappedBy = "studenties")
+    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Absence> absences;
-
-    @OneToMany(mappedBy = "studentes")
-    private List<Total> totalList;
 }
